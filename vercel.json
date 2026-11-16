@@ -1,0 +1,61 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/diamondarena",
+      "permanent": false
+    },
+    {
+      "source": "/login",
+      "destination": "/diamondarena/login",
+      "permanent": false
+    },
+    {
+      "source": "/momentum",
+      "destination": "/diamondarena",
+      "permanent": false
+    },
+    {
+      "source": "/momentum/:path*",
+      "destination": "/diamondarena/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/accountablity-system",
+      "destination": "/diamondarena",
+      "permanent": false
+    },
+    {
+      "source": "/accountablity-system/:path*",
+      "destination": "/diamondarena/:path*",
+      "permanent": false
+    }
+  ],
+  "crons": [
+    {
+      "path": "/diamondarena/api/cron/risk-check",
+      "schedule": "0 2 * * *"
+    },
+    {
+      "path": "/diamondarena/api/cron/payment-reminders",
+      "schedule": "0 3 * * *"
+    },
+    {
+      "path": "/diamondarena/api/cron/weekly-reminders",
+      "schedule": "0 10 * * 5"
+    },
+    {
+      "path": "/diamondarena/api/cron/backup",
+      "schedule": "0 1 * * 0"
+    },
+    {
+      "path": "/diamondarena/api/cron/reminder-rules",
+      "schedule": "30 3 * * *"
+    },
+    {
+      "path": "/diamondarena/api/cron/reminder-rules",
+      "schedule": "30 12 * * *"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+node_modules/
+.next/
+out/
+build/
+.env
+.env.local
+.env.production
+*.log
+.DS_Store
+prisma/dev.db
+prisma/dev.db-journal
+public/uploads/
+!public/uploads/.gitkeep
+.vercel
+.env*.local
+tsconfig.tsbuildinfo
+
+# local Claude Code settings
+.claude/settings.local.json
+
+# local DB dumps — never commit
+backups/
+
+# every env file, including the .env.prod.pull the deploy command writes
+.env*
